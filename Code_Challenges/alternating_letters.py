@@ -1,3 +1,7 @@
+# Solved 05/26/2020 
+# HackerRank 
+# https://www.hackerrank.com/challenges/alternating-characters
+
 def alternatingCharacters(s):
     output = []
     for letter_string in s[1:]:
