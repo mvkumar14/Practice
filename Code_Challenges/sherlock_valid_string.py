@@ -24,7 +24,7 @@ def isValid(s):
             frequencies[char] = 1
             pass
     
-    meta = {}
+    meta = {} # maybe I need a better name for this? its a frequency of frequencies.
     for key in frequencies:
         if meta.__contains__(frequencies[key]):
             meta[frequencies[key]] += 1
