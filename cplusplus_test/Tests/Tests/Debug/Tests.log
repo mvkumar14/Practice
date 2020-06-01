@@ -1,3 +1,8 @@
-﻿G:\Apps\VisualStudio\2019\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(441,5): warning MSB8003: The WindowsSDKDir property is not defined. Some build tools may not be found.
-  Scratch.cpp
-G:\Apps\VisualStudio\2019\VC\Tools\MSVC\14.24.28314\include\yvals.h(12,10): fatal error C1083: Cannot open include file: 'crtdbg.h': No such file or directory
+﻿  Scratch.cpp
+G:\Data\Programs\Practice\cplusplus_test\Tests\Tests\Scratch.cpp(6,12): warning C4305: 'argument': truncation from 'int' to 'const _Elem'
+          with
+          [
+              _Elem=char
+          ]
+G:\Data\Programs\Practice\cplusplus_test\Tests\Tests\Scratch.cpp(5,9): warning C4309: 'argument': truncation of constant value
+G:\Data\Programs\Practice\cplusplus_test\Tests\Tests\Scratch.cpp(6,7): error C2143: syntax error: missing ';' before 'std::cout'

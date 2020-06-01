@@ -1,12 +1,27 @@
-def add_1(a):
-    self.a += 1
-    return a + 1
+import time
+def factorial(num):
+    return go(num,1)
 
-class_dict = {'a':0,'increment_a':add_1}
+def go(num,accumulator):
+    if num == 1:
+        return accumulator
+    else:
+        return go(num-1, num * accumulator)
 
-dyn_class = type('Test',(object,),class_dict)
+start = time.time()
+a = factorial(100)
+print(a)
+end = time.time()
+print(end-start)
 
-print(dyn_class.__name__)
-print(dir(dyn_class))
+def factorial2(num):
+    if num == 1:
+        return 1
+    else:
+        return num * factorial2(num-1)
 
-print(dyn_class.increment_a(2))
+start = time.time()
+a = factorial2(100)
+print(a)
+end = time.time()
+print(end-start)

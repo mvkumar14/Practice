@@ -2,7 +2,7 @@
 
 void PrintName(std::string& name)
 {
-	name = 'test';
+	name = 'test' // not sure why this isn't working properly.
 	std::cout << name;
 }
 
@@ -11,7 +11,7 @@ int main()
 	std::string firstName = "Kumar";
 	std::cout << firstName;
 	PrintName(firstName);
-	PrintName('test') 
+	//PrintName('test');
 }
 
 // when you have an lvalue 
