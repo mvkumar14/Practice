@@ -1,3 +1,7 @@
+# Solved 06/05/2020
+# CodeSignal
+# https://app.codesignal.com/arcade/intro/level-4/xvkRbxYkdHdHNCKjg
+
 def arrayChange(inputArray):
     # strictly increasing so 
     # core logic
@@ -12,8 +16,11 @@ def arrayChange(inputArray):
             prev = current
             continue
         else:
-            while current < prev:
+            while current <= prev:
                 current += 1
                 counter += 1
             prev = current
     return counter
+
+my_arr = [1,1,1]
+print(arrayChange(my_arr))
