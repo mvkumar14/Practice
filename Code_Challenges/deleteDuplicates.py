@@ -20,7 +20,7 @@ class Solution(object):
         current = node  # is this better form or is it better form
         # to do node.next and modify node which was the input value?
         while current.next is not None:
-            if current.next in cache:
+            if current.next.val in cache:
                 current.next = current.next.next  # assuming garbage collection?
                 current = current.next
             else: 
