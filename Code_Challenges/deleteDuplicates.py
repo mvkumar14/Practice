@@ -1,5 +1,5 @@
 class Node(object):
-    def __init__(self,val,next=None):
+    def __init__(self, val, next=None):
         self.val = val
         self.next = next
     def __str__(self):
@@ -8,7 +8,7 @@ class Node(object):
         return str(self.val) + " " + str(self.next)
 
 class Solution(object):
-    def deleteDuplicates(self,node):
+    def delete_duplicates(self, node):
         # keep values in a cache
         # if next.value is a duplicate value (in cache)
         # then set self.next to next.next and check 
@@ -16,12 +16,13 @@ class Solution(object):
         # if its a new value
         # add it to the cache and "focus" next
         cache = []
-        cache.append(node.value)
-        current = node # is this better form or is it better form
+        cache.append(node.val)
+        current = node  # is this better form or is it better form
         # to do node.next and modify node which was the input value?
         while current.next is not None:
             if current.next in cache:
-                current.next = current.next.next # assuming garbage collection?
+                current.next = current.next.next  # assuming garbage collection?
+                current = current.next
             else: 
                 cache.append(current.next.val)
                 current = current.next
@@ -31,8 +32,8 @@ class Solution(object):
 
 # Why does the Solution class inherit from "object" What is the "object" class?
 # when would I inherit from the "object" class
-n = Node(1,Node(2,Node(3,Node(4))))
+
+n = Node(1, Node(3, Node(3, Node(4))))
 print(n)
-Solution().deleteDuplicates(n)
-print(n)
-            
+Solution().delete_duplicates(n)
+print(n)      

@@ -2,7 +2,7 @@
 # Hackerrank
 # https://www.hackerrank.com/challenges/sherlock-and-valid-string/
 
-def isValid(s):
+def is_valid(s):
     # create a frequency count
     # if there are 3 plus frequencies return false
     # if there are two frequencies, but the difference in frequencies
