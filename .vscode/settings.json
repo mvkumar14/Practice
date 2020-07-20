@@ -5,5 +5,5 @@
     "terminal.integrated.shell.windows": "cmd.exe",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
-    "python.linting.pycodestyleEnabled": true
+    "python.linting.pycodestyleEnabled": false
 }
