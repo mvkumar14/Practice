@@ -58,12 +58,14 @@ test = [[True,False,False],
  [False,True,False], 
  [False,False,False]]
 
-print("-------------")
-print("TEST 1")
-print(minesweeper(test))
+# print("-------------")
+# print("TEST 1")
+# print(minesweeper(test))
 
-test = [[False,False,False],[False,False,False]]
+# test = [[False,False,False],[False,False,False]]
 
-print("-------------")
-print("TEST 2")
-print(minesweeper(test))
+# print("-------------")
+# print("TEST 2")
+# print(minesweeper(test))
+
+print(-test[0][1])
