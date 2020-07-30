@@ -1,5 +1,5 @@
 import unittest
-from string_rearrangement import *
+from string_rearrangement2 import *
 
 class TestStringRearrangement(unittest.TestCase):
     

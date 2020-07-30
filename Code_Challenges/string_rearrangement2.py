@@ -1,41 +1,13 @@
+import itertools
+
 def stringsRearrangement(inputArray):
     compare = inputArray[0]
     distances = []
-    for i in inputArray:
-        current_distance = distance(compare,i)
-        distances.append(current_distance)
-    return metadata_check(distances)
+    for i in itertools.permutations(inputArray):
+        if sequence(i):
+            return True
+    return False
     
-def metadata_check(distances):
-    distances = sorted(distances)
-    prev = distances[0]
-    count = 0
-    frequencies = []
-    for i in distances:
-        if i == prev:
-            count += 1
-            continue
-        elif i == prev + 1:
-            frequencies.append(count)
-            count = 1
-            prev = i
-            continue
-        else:
-            return False
-
-    frequencies.append(count)
-    prev = frequencies[0]
-
-    if len(frequencies) == 1:
-        return False
-
-    # for i in frequencies:
-    #     if i == prev or i == prev + 1 or i == prev - 1:
-    #         continue
-    #     else:
-    #         return False
-    
-    return True
 
 def distance(a,b):
     # this function takes two strings, and tells you 
@@ -65,6 +37,8 @@ def distance_bool(a,b):
                 return False
             else:
                 count = 1
+    if count == 0:
+        return False
     return True
         
 
@@ -80,11 +54,12 @@ def sequence(inputArray):
     return True
 
 
-# data = ["zzzzab", 
-#  "zzzzbb", 
-#  "zzzzaa"]
+data = ["abc", 
+ "abx", 
+ "axx", 
+ "abc"]
 
-# print(stringsRearrangement(data))
+print(stringsRearrangement(data))
             
     
 
