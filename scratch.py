@@ -1,8 +1,13 @@
-a = 0
-while a<4:
-    if a!=2:
-        print(a)
-        a += 1
-        continue
-    print("skipped")
-    a += 1
+import numpy as np
+
+a = np.array([[9,9],[1,2]])
+b = np.array([[9,9],[1,2]])
+c = [[9,9],[2,8]]
+
+a = [1,2,3,4]
+b = [2,3,4,5]
+
+c = [a,b]
+d = [2,2,4,5]
+if d in c:
+    print("true")
