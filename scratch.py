@@ -1,13 +1,29 @@
-import numpy as np
+import sqlite3
+class Point:
+    def __init__(self,x,y):
+        self.x, self.y = x,y
+    def __conform__(self,protocol):
+        if protocol is sqlite3.PrepareProtocol:
+            return "%f;%f" % (self.x,self.y)
 
-a = np.array([[9,9],[1,2]])
-b = np.array([[9,9],[1,2]])
-c = [[9,9],[2,8]]
+p = Point(4.0,-3.2)
 
-a = [1,2,3,4]
-b = [2,3,4,5]
+conn = sqlite3.connect(':memory:')
 
-c = [a,b]
-d = [2,2,4,5]
-if d in c:
-    print("true")
+c = conn.cursor()
+
+# create table
+c.execute('''CREATE TABLE points
+    (x,y)''')
+
+# insert a row of data
+c.execute("INSERT INTO points VALUES (?)", (p,))
+
+# save changes
+conn.commit()
+
+# read data
+c.execute("SELECT * FROM points")
+print(c.fetchone())
+
+conn.close()
