@@ -130,3 +130,7 @@ dmypy.json
 
 # test file. I'm worried that 
 mock.csv
+
+# scratch files
+scratch.py
+scratch_2.py
